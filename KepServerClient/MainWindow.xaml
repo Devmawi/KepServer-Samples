@@ -1,0 +1,19 @@
+﻿<Window x:Class="KepServerClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KepServerClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="300">
+    <StackPanel Orientation="Vertical" Margin="20">
+        <Label FontSize="16" Content="Tag" Margin="0,0,0,0"/>
+        <TextBox Text="SimChannel.SimDevice.Counter" FontSize="16" x:Name="TagName"  Margin="0,0,0,2" />
+        <Label FontSize="16" Content="Value"  Margin="0,0,0,0" />
+        <TextBox Text="10" FontSize="16" x:Name="Value"  Margin="0,0,0,10" />
+        <CheckBox x:Name="cbEnableMqttSubscription" IsChecked="True" Content="Subscripe to mqtt"  Margin="0,0,0,10" />
+        <Button x:Name="RestValueReadButton" FontSize="16" Content="Get value by REST-API" Margin="0,0,0,10" Click="Button_Click" />
+        <Button FontSize="16" Content="Set value by REST-API" Margin="0,0,0,10" Click="Button_Click_1" />
+        <Button FontSize="16" Content="Set value by MQTT" Click="Button_Click_2" />
+    </StackPanel>
+</Window>
