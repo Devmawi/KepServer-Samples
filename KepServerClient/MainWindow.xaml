@@ -5,15 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KepServerClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="300">
+        Title="MainWindow" Height="400" Width="300" Closed="Window_Closed">
     <StackPanel Orientation="Vertical" Margin="20">
         <Label FontSize="16" Content="Tag" Margin="0,0,0,0"/>
         <TextBox Text="SimChannel.SimDevice.Counter" FontSize="16" x:Name="TagName"  Margin="0,0,0,2" />
         <Label FontSize="16" Content="Value"  Margin="0,0,0,0" />
         <TextBox Text="10" FontSize="16" x:Name="Value"  Margin="0,0,0,10" />
-        <CheckBox x:Name="cbEnableMqttSubscription" IsChecked="True" Content="Subscripe to mqtt"  Margin="0,0,0,10" />
+        <CheckBox x:Name="cbEnableMqttSubscription" IsChecked="True" Content="Subscripe to mqtt"  Margin="0,0,0,5" />
+        <CheckBox x:Name="cbEnableOpcUAMonitoredItem" IsChecked="True" Content="Subscripe to OPC UA Monitored Item"  Margin="0,0,0,10" />
         <Button x:Name="RestValueReadButton" FontSize="16" Content="Get value by REST-API" Margin="0,0,0,10" Click="Button_Click" />
         <Button FontSize="16" Content="Set value by REST-API" Margin="0,0,0,10" Click="Button_Click_1" />
-        <Button FontSize="16" Content="Set value by MQTT" Click="Button_Click_2" />
+        <Button FontSize="16" Content="Set value by MQTT" Click="Button_Click_2" Margin="0,0,0,10" />
+        <Button FontSize="16" x:Name="btnOpcUaWrite" Content="Set value by OPC UA" Click="btnOpcUaWrite_Click"/>
+       
     </StackPanel>
 </Window>
